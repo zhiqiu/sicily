@@ -1,17 +1,9 @@
-// Problem#: 14406
-// Submission#: 3695374
-// The source code is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
-// URI: http://creativecommons.org/licenses/by-nc-sa/3.0/
-// All Copyright reserved by Informatic Lab of Sun Yat-sen University
-// Problem#: 14406
-// Submission#: 3695163
-// The source code is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License
-// URI: http://creativecommons.org/licenses/by-nc-sa/3.0/
-// All Copyright reserved by Informatic Lab of Sun Yat-sen University
 /*
 * A cpp file to test copying pointer to class member like "s = a.s;"
 * and show the need of const operator[] func
+* 2015.4.20
 */
+
 #include <iostream>
 #include <cstring>
 using namespace std;
