@@ -1,6 +1,6 @@
 /*
 * A cpp file to test copying pointer to class member like "s = a.s;"
-* and show the need of const operator[] func
+* and show the need of two operator[] func overloading
 * 2015.4.20
 */
 
@@ -11,12 +11,20 @@ using namespace std;
 class Test{
     public:
     char *s;
-    Test(char *str){
+    
+	Test(char *str){
         s = new char[strlen(str)+1];
         strcpy(s,str);
     }
+
+	// copy constructor, 
+	// if write like this, s and s.s will point to the same memory block, Wrong
+	//
     Test(const Test &a){
         s = a.s;
+		// right way is : 
+		// s = new [strlen(a.s)+1];
+		// strcpy(s,a.s);
     }
     void modify(){
         s[1] = '0';
