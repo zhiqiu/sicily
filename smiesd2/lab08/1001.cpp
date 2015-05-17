@@ -81,6 +81,7 @@ String String::operator+(const String& s) {
 
 String::~String() {
 	delete[] str;
+	str = NULL;
 }
 char& String::operator[](int i) {
 	return str[i];
