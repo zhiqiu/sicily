@@ -1,5 +1,5 @@
 // c++ Polymorphism
-
+#include <algorithm>
 class Bank
 {
 public:
@@ -104,10 +104,12 @@ public:
 	}
 	void transfer(Bank *bank1, Bank *bank2, double money)
 	{
-		// Bank* B;
 		double temp = bank1->getMoney();
-		bank1->withdraw(bank1->getMoney());
-		bank2->deposit(temp);
+		
+		bank1->withdraw(min(temp, money));
+		bank2->deposit(min(temp, money));
+		
+
 
 	}
 	void printAccount() const
